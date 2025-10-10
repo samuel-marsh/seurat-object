@@ -3782,7 +3782,9 @@ subset.Seurat <- function(
             classes = 'validationWarning'
           ),
           error = function(e) {
-            if (e$message == "Cannot find features provided") {
+            if (e$message %in% c("Cannot find features provided", 
+                                 "None of the features provided found in this assay")
+            ) {
               return(NULL)
             } else {
               stop(e)
