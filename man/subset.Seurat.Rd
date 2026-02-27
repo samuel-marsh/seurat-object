@@ -48,7 +48,7 @@ Subset \code{Seurat} Objects
 }
 \examples{
 # `subset` examples
-# subset using expression threshold (and optionally the layer to use)
+# subset using expression threshold (and optionally specify the layer to use)
 subset(pbmc_small, subset = MS4A1 > 4)
 subset(pbmc_small, subset = MS4A1 > 3, layer = 'counts')
 
